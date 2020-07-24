@@ -1,0 +1,80 @@
+.searchbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.searchbar label {
+    font-size: 24px;
+}
+
+.searchbar input {
+    margin-top: 10px;
+    background-color: transparent;
+    border: 0;
+    color: var(--highlight-color);
+    font-size: 48px;
+    padding: 8px 12px;
+    outline: none;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    max-width: 100%;
+    justify-content: initial;
+}
+
+.list::-webkit-scrollbar {    display: none;}
+
+.list .track {
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list .track img {
+    width: 160px;
+    height: 160px;
+}
+
+.list .track .info {
+    align-self: flex-start;
+}
+
+.list .track .info .album {
+    color: var(--font-color);
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.list .track .info .artist {
+    color: var(--highlight-color);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.load-more {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+@media screen and (max-width: 576px){
+    .searchbar input {
+        font-size: 26px;
+    }
+    .list .track {
+        width: 300px;
+        height: 350px;
+    }
+
+    .list .track img {
+        width: 280px;
+        height: 280px;
+    }
+}

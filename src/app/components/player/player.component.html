@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <div class="message">
+        O que estou ouvindo?
+    </div>
+    <div class="info" *ngIf="artist != null; else elseBlock">
+        <span>{{artist}} - {{music}}</span>
+        <img *ngIf="isPlaying" src="assets/playing.gif">
+    </div>
+    <ng-template #elseBlock>Nada por enquanto</ng-template>
+    <div class="player">
+        <audio #audio controls></audio>
+    </div>
+</div>

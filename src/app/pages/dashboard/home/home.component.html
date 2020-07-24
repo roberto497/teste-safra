@@ -1,0 +1,28 @@
+<div class="searchbar">
+    <label>Busque por artistas, álbuns ou músicas</label>
+    <input type="text" [disabled]="isSearching" placeholder="Comece a escrever" [(ngModel)]="searchText" (keyup.enter)="search()">
+</div>
+<div class="results">
+    <p  *ngIf="searchText != null">{{totalItems}} resultado(s) encontrado(s) para "{{searchText}}"</p>
+
+    <!--<ul>
+        <li *ngFor="let item of (cart$ | async).albums">item.name</li>
+    </ul>-->
+    <div class="list">
+        <div class="track" *ngFor="let item of albums" (click)="goToAlbum(item.id)">
+            <img *ngIf="item.images.length > 0" src="{{item.images[0].url}}" >
+            <img *ngIf="item.images.length == 0" src="assets/no_image.png">
+            <div class="info">
+                <div class="album">
+                    {{item.name}}
+                </div>
+                <div class="artist">
+                    <span *ngFor="let artist of item.artists">{{artist.name}}, </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="load-more" *ngIf="totalItems > albums.length">
+        <button [disabled]="isSearching" class="btn primary" (click)="search(false)">Carregar mais...</button>
+    </div>
+</div>

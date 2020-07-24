@@ -1,0 +1,27 @@
+<div *ngIf="album">
+    <a [routerLink]="['/dashboard/home']" class="back">Voltar</a>
+    <div class="wrapper">
+        <div class="description">
+            <div class="track">
+                <img src="{{album.images[0].url}}" width="250" height="250">
+                <div class="info">
+                    <div class="album">
+                        {{album.name}}
+                    </div>
+                    <div class="artist">
+                        <span *ngFor="let artist of album.artists">{{artist.name}}, </span>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="tracks" *ngIf="album.total_tracks > 0">
+                <div class="music" *ngFor="let item of album.tracks.items; let i = index">
+                    <div class="name"><a href="javascript:void(null)" (click)="play(item)">{{(i+1)}}. {{item.name}}</a></div>
+                    <div class="duration">{{item.duration}}</div>
+                </div>
+        </div>   
+    </div>
+</div>
+
+
+

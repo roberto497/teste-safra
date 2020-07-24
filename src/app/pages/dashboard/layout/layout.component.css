@@ -1,0 +1,37 @@
+.wrapper {
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    height: 80px;
+}
+
+.header .logo {
+    margin-left: 10px;
+}
+
+.header .logo img {
+    width: 64px;
+    height: 64px;
+}
+
+app-player {
+    position: fixed;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 576px){
+    .wrapper {
+        max-height: calc(100vh - 100px);
+    }
+    app-player {
+        height: 100px;
+    }
+}

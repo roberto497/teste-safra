@@ -1,1 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { 
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--font-color);
+}
+
+:root {
+    --main-bg-color: #222222;
+    --font-color: #fafafa;
+    --highlight-color: #999999;
+}
+
+.container {
+    max-width: 960px;
+}
+
+.btn {
+    color: var(--highlight-color);
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0, 0, 0);
+    transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:disabled {
+    background-color: rgba(0,0,0,.12);
+    cursor: default;
+}
+
+.btn.primary {
+    background-color: #3f51b5;
+    color: white;
+}
+
+@media screen and (max-width: 1200px){
+    .container {
+        max-width: 1140px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media screen and (max-width: 768px){
+    .container {
+        max-width: 720px;
+    }
+}
+@media screen and (max-width: 576px){
+    .container {
+        max-width: 540px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}

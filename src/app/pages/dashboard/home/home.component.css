@@ -1,3 +1,7 @@
+.wrapper {
+    padding: 12px;
+}
+
 .searchbar {
     width: 100%;
     display: flex;
@@ -41,6 +45,7 @@
 .list .track img {
     width: 160px;
     height: 160px;
+    border-radius: 4px;
 }
 
 .list .track .info {
@@ -67,6 +72,9 @@
 @media screen and (max-width: 576px){
     .searchbar input {
         font-size: 26px;
+    }
+    .list {
+        justify-content: center;
     }
     .list .track {
         width: 300px;
